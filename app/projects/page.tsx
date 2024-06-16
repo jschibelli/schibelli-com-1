@@ -15,6 +15,8 @@ export const metadata = {
   description: "List of projects",
 };
 
+
+
 export const revalidate = 60;
 
 export default async function ProjectsPage() {

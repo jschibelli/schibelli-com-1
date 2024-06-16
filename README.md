@@ -1,33 +1,186 @@
-<div align="center">
-    <a href="https://chronark.com"><h1 align="center">chronark.com</h1></a>
 
-My personal website, built with [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/), [Upstash](https://upstash.com?ref=chronark.com), [Contentlayer](https://www.contentlayer.dev/) and deployed to [Vercel](https://vercel.com/).
+# schibelli-com
 
-</div>
+Welcome to the schibelli-com project! This project is a personal website built with Next.js, Tailwind CSS, and MDX.
 
-<br/>
+## Features
+- **Modern Web Technologies**: Built with Next.js and Tailwind CSS.
+- **Content Management**: Easy content management with MDX.
+- **Reusable Components**: Modular and reusable components.
+- **Analytics**: Integrated analytics for tracking site performance.
 
+## Technology Stack
+- **Framework**: Next.js
+- **Styling**: Tailwind CSS
+- **Content**: MDX
+- **Package Manager**: pnpm
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/upstash/clone?demo-title=Next.js%20Portfolio%20with%20Pageview%20Counter&demo-description=Portfolio%20site%20with%20pageview%20counter%2C%20built%20with%20Next.js%2013%20App%20Router%2C%20Contentlayer%2C%20and%20Upstash%20Redis.&demo-url=https%3A%2F%2Fchronark.com%2F&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F1DA8n5a6WaP9p1FXf9LmUY%2Fc6264fa2732355787bf657df92dda8a1%2FCleanShot_2023-04-17_at_14.17.37.png&project-name=Next.js%20Portfolio%20with%20Pageview%20Counter&repository-name=nextjs-portfolio-pageview-counter&repository-url=https%3A%2F%2Fgithub.com%2Fchronark%2Fchronark.com&from=templates&integration-ids=oac_V3R1GIpkoJorr6fqyiwdhl17)
+## Getting Started
 
-## Running Locally
+### Prerequisites
+- **Node.js**: [Download and install Node.js](https://nodejs.org/)
+- **pnpm**: Install pnpm globally using npm:
+  ```sh
+  npm install -g pnpm
+  ```
 
+### Installation
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/jschibelli/schibelli-com.git
+   cd schibelli-com
+   ```
 
-```sh-session
-git clone https://github.com/chronark/chronark.com.git
-cd chronark.com
-```
+2. Install dependencies:
+   ```sh
+   pnpm install
+   ```
 
+3. Set up environment variables:
+   ```sh
+   cp .env.example .env
+   ```
 
-Create a `.env` file similar to [`.env.example`](https://github.com/chronark/chronark.com/blob/main/.env.example).
-
-Then install dependencies and run the development server:
-```sh-session
-pnpm install
+### Running the Project Locally
+Start the development server:
+```sh
 pnpm dev
 ```
+Open your browser and navigate to `http://localhost:3000`.
 
+## Project Structure
 
-## Cloning / Forking
+The project has the following structure:
 
-Please remove all of my personal information (projects, images, etc.) before deploying your own version of this site.
+- `.vscode/`: VSCode specific settings
+- `app/`: Main application components and pages
+  - `layout.tsx`: Defines the layout component.
+  - `page.tsx`: Defines the main page component.
+  - `components/`: Reusable UI components.
+  - `contact/`: Contact page components.
+  - `projects/`: Project-related components.
+- `content/`: MDX content files
+- `pages/`: API route handlers
+- `public/`: Static assets
+- `types/`: TypeScript type declarations
+- `util/`: Utility functions
+- `.env.example`: Example environment configuration
+- `.gitignore`: Git ignore file
+- `LICENSE`: License information
+- `README.md`: Project documentation
+- `contentlayer.config.js`: Content layer configuration
+- `global.css`: Global CSS styles
+- `mdx-components.tsx`: Custom MDX components
+- `next.config.mjs`: Next.js configuration
+- `package.json`: Project dependencies and scripts
+- `pnpm-lock.yaml`: pnpm lockfile
+- `postcss.config.js`: PostCSS configuration
+- `rome.json`: Rome toolchain configuration
+- `tailwind.config.js`: Tailwind CSS configuration
+- `tsconfig.json`: TypeScript configuration
+
+## Environment Variables
+
+The `.env` file should contain the following environment variables:
+
+- `VARIABLE_NAME_1`: Description of VARIABLE_NAME_1
+- `VARIABLE_NAME_2`: Description of VARIABLE_NAME_2
+- `VARIABLE_NAME_3`: Description of VARIABLE_NAME_3
+
+Example `.env` file:
+```
+VARIABLE_NAME_1=value1
+VARIABLE_NAME_2=value2
+VARIABLE_NAME_3=value3
+```
+
+## Scripts and Commands
+
+The following scripts are available in the `package.json`:
+
+- `pnpm dev`: Start the development server
+- `pnpm build`: Build the project for production
+- `pnpm start`: Start the production server
+- `pnpm lint`: Run linting
+- `pnpm format`: Format the codebase
+
+## Components
+
+### `app/components`
+
+#### `analytics.tsx`
+Component for integrating analytics.
+
+#### `card.tsx`
+Component for displaying cards.
+
+#### `container.tsx`
+Component for container layout.
+
+#### `footer.tsx`
+Footer component.
+
+#### `header.tsx`
+Header component.
+
+#### `icons.tsx`
+Icon components.
+
+## Content Management
+
+### Adding New Content
+
+Content files are stored in the `content/` directory. Each project or post is represented by an MDX file.
+
+#### Example MDX File
+```mdx
+---
+title: "Project Title"
+date: "2024-01-01"
+---
+
+# Project Title
+
+Description of the project.
+```
+
+### Managing Projects
+To add a new project, create a new `.mdx` file in the `content/projects/` directory.
+
+## Deployment
+
+### Building for Production
+To build the project for production, run:
+```sh
+pnpm build
+```
+
+### Starting the Production Server
+To start the production server, run:
+```sh
+pnpm start
+```
+
+### Deployment to Platforms
+- **Vercel**: [Deployment guide for Vercel](https://vercel.com/docs)
+- **Netlify**: [Deployment guide for Netlify](https://docs.netlify.com/)
+
+## Contributing
+
+Thank you for considering contributing to this project! Please follow these guidelines to contribute.
+
+### Reporting Issues
+Please use the [GitHub Issues](https://github.com/jschibelli/schibelli-com/issues) to report bugs or request features.
+
+### Pull Requests
+1. Fork the repository.
+2. Create a new branch.
+3. Make your changes.
+4. Submit a pull request.
+
+### Code Style
+Please follow the existing code style and conventions.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
